@@ -1,18 +1,18 @@
 LazSerial v0.6
 Serial Port Component for Lazarus 
-by Jurassic Pork  03/2013 03/2022
+by Jurassic Pork 03/2013 03/2022
 
- Based on  :
+ Based on :
 - SdpoSerial v0.1.4
-  CopyRight (C) 2006-2010 Paulo Costa
-   paco@fe.up.pt
+ CopyRight (C) 2006-2010 Paulo Costa
+ paco@fe.up.pt
  
-- Synaser library  by Lukas Gebauer 
+- Synaser library by Lukas Gebauer 
 - TcomPort component 
 
  new in v0.3 version
  Add conditional macros for cpuarm rpi in lazsynaser.pas
- Hide Active property from IDE Object inspector              
+ Hide Active property from IDE Object inspector 
  
  new in v0.4 version (02/2021)
  DeviceClose procedure fixed
@@ -22,39 +22,39 @@ by Jurassic Pork  03/2013 03/2022
 
  new in v0.6 version (03/2022)
  Fixes for OS-X (thanks to rphoover), SynSer(synaser) properties now persistent, v0.3 of GPS simulator
- On OS-X you must set the property  SynSer/NonBlock to True  in the properties of TLazserial component. 
+ On OS-X you must set the property SynSer/NonBlock to True in the properties of TLazserial component. 
  
 Features :
-Changed :  baudrate values.
-           stop bits  new value : 1.5
+Changed : baudrate values.
+ stop bits new value : 1.5
 new event : onstatus
 new property FRcvLineCRLF : if this property is true, you use RecvString
 in place of RecvPacket when you read data from the port.
 
-new procedure  ShowSetupDialog to open a port settings form :
+new procedure ShowSetupDialog to open a port settings form :
 the device combobox contain the enumerated ports.
 new procedure to enumerate real serial port on linux ( in synaser).
 
 Demo : a simulator of serial port gps + serial port receiver :
 you can send NMEA frames ( GGA GLL RMC) to the opened serial port
 (start gps simulator). You can change speed and heading.
-In the memo you can see what is received from  the opened serial port.
+In the memo you can see what is received from the opened serial port.
 In the status bar you can see the status events.
 
-tested with windows 10 and Ubuntu 20.04  Lazarus 2.0.10
-                                       
+tested with windows 10 and Ubuntu 20.04 Lazarus 2.0.10
+
 if you haven't serial ports in your PC you can use virtual ports :
 1 - WINDOWS 
-To simulate  a paired serial ports on  windows : com0com   
+To simulate a paired serial ports on windows : com0com 
 ex : 
 
 2 - Linux
-To simulate  a paired serial ports on linux : socat 
-ex :  socat -d -d PTY: PTY:
+To simulate a paired serial ports on linux : socat 
+ex : socat -d -d PTY: PTY:
 
 To connect to a bluetooth GPS on Linux
-echo connection to a  bluetooth GPS(/dev/rfcomm0)
+echo connection to a bluetooth GPS(/dev/rfcomm0)
 
-sudo rfcomm bind  0 xx:xx:xx:xx:xx:xx 1
+sudo rfcomm bind 0 xx:xx:xx:xx:xx:xx 1
 ===========================================================
 ScreenShot here : https://user-images.githubusercontent.com/9909302/160068324-3467fac2-90e4-4625-9bfb-9cc0ef058bad.PNG
